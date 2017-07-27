@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const methodOverride = require('mehtod-override')
+const methodOverride = require('method-override')
 const cors = require('cors')
 
 const config = require('./server/config')
@@ -13,6 +13,8 @@ const mongoDb = mongoose.connection
 mongoDb.on('error', () => {
   console.error('MongoDB Connection Error. Please make sure that', config.MONGO_URI, 'is running.')
 })
+
+process.env.NODE_ENV = 'dev'
 
 const app = express()
 
@@ -27,6 +29,11 @@ app.set('port', port)
 if (process.env.NODE_ENV !== 'dev') {
   app.use('/', express.static(path.join(__dirname, './dist')))
 }
+
+app.get('/', (req, res, next) => {
+  res.send('Hello!')
+  next()
+})
 
 require('./server/api')(app, config)
 
