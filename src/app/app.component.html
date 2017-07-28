@@ -1,5 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1> Welcome to {{title}}!!!</h1>
+<div class="layout-overflow">
+  <div
+    class="layout-canvas"
+    [ngClass]="{'nav-open': navOpen, 'nav-closed': !navOpen}"
+    [style.min-height]="minHeight">
+
+    <app-header (navToggled)="navToggledHandler($event)"></app-header>
+
+    <div id="layout-view" class="layout-view">
+      <router-outlet></router-outlet>
+    </div>
+
+    <app-footer></app-footer>
+
+  </div>
 </div>
-<router-outlet></router-outlet>
