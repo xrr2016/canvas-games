@@ -2,7 +2,9 @@ const canvas = document.getElementById('desk')
 const ctx = canvas.getContext('2d')
 const cWidth = 400
 const cHeight = 300
-const dWidth = 100
+const diceX = 50
+const diceY = 50
+const diceW = 100
 const dotRadius = 6
 
 function init () {
@@ -21,6 +23,21 @@ function drawDice(n) {
       break
   }
 }
+
+function draw1() {
+  let dotX, dotY
+  ctx.beginPath()
+  dotX = diceX + .5 * diceW
+  dotY = diceY + .5 * diceY
+  ctx.arc(dotX, dotY, 0, Math.PI * 2, true)
+  ctx.closePath()
+  ctx.fill()
+}
+function draw2() {}
+function draw3() {}
+function draw4() {}
+function draw5() {}
+function draw6() {}
 
 function randomDicePoint () {
   return Math.floor(Math.random() * 6) + 1
