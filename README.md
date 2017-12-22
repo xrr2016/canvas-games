@@ -1,1 +1,1 @@
-# canvas games
+# sukudo games
