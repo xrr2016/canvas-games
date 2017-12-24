@@ -5,6 +5,9 @@
   "repository": "git@github.com:xrr2016/sudoku-game.git",
   "author": "xrr2016 <xiaoranran1993@163.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server"
+  },
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
