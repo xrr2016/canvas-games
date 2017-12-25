@@ -1,3 +1,4 @@
 plugins: [
-  require('precss')
+  require('precss'),
+  require('cssnano')
 ]
