@@ -12,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.js?$/,
+        test: /.js$/,
         include: [path.resolve(__dirname, 'src')],
         loader: 'babel-loader'
       }, {
@@ -36,9 +36,5 @@ module.exports = {
   resolve: {
     extensions: ['.json', '.js', '.jsx', '.css']
   },
-  devtool: 'source-map',
-  devServer: {
-    publicPath: path.join('/dist/'),
-    hot: true
-  }
+  devtool: 'source-map'
 }
