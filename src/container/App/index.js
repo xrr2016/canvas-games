@@ -4,6 +4,8 @@ import Logo from '../../components/Logo'
 import Github from '../../components/Github'
 import Color from '../../components/Color'
 import ConvertBtn from '../../components/ConvertBtn'
+import DevTools from 'mobx-react-devtools'
+
 import './App.scss'
 
 @observer
@@ -11,6 +13,7 @@ class App extends Component {
 	render() {
 		return (
 			<main className="app">
+				<DevTools />
 				<header className="header">
 					<Logo text="color converter" />
 					<Github />
@@ -32,19 +35,8 @@ class App extends Component {
 				<div className="progress-bar" />
 				<section className="container historys">
 					<span className="history">#ff8922</span>
-					<span className="history">rgb(233, 233, 222)</span>
-					<span className="history">rgb(233, 233, 222)</span>
-					<span className="history">rgb(233, 233, 222)</span>
-					<span className="history">rgb(233, 233, 222)</span>
 					<span className="history">hsl(222, 10, 21)</span>
 					<span className="history">hs(222, 111, 00)</span>
-					<span className="history">#ff8922</span>
-					<span className="history">#ff8922</span>
-					<span className="history">#ff8922</span>
-					<span className="history">#ff8922</span>
-					<span className="history">#ff8922</span>
-					<span className="history">#ff8922</span>
-					<span className="history">#ff8922</span>
 					<span className="history">#ff8922</span>
 				</section>
 				<section className="container results">
